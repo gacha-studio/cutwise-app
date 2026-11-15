@@ -80,7 +80,7 @@ body *::placeholder{color:#000!important;opacity:.6}
       <section class="panel" id="panel-stock" aria-labelledby="heading-stock" hidden>
         <div class="panel-heading"><div><p class="eyebrow">STEP 02</p><h2 id="heading-stock">長尺材を登録</h2></div><span class="section-icon">▰</span></div>
         <p class="panel-copy">使える材料の長さと本数を入力します。</p>
-        <div class="list-heading"><span>材料サイズ</span><span>長さ <small>mm</small></span><span>本数</span><span></span></div>
+        <div class="list-heading"><span>材料名</span><span>長さ <small>mm</small></span><span>本数</span><span></span></div>
         <div id="stockRows" class="entry-list"></div>
         <button class="add-row" id="addStock"><span>＋</span> 長尺材を追加</button>
         <div class="actions split"><button class="button secondary" data-prev="settings">戻る</button><button class="button primary" data-next="parts">取合材を入力 <span>→</span></button></div>
@@ -184,7 +184,7 @@ body *::placeholder{color:#000!important;opacity:.6}
       if (!isStock) {
         nameInput = makeInput({ value: row.name, placeholder: '例：部材 A', label: `取合材 ${index + 1} 名称` });
       } else {
-        nameInput = makeInput({ value: row.name, placeholder: '材料サイズ', label: `長尺材 ${index + 1} 名称` });
+        nameInput = makeInput({ value: row.name, placeholder: '材料名', label: `長尺材 ${index + 1} 名称` });
       }
       const remove = document.createElement('button');
       remove.type = 'button';
